@@ -18,10 +18,10 @@ import Footer from "../../components/footer/Footer";
 
 const List = () => {
   const location = useLocation();
-  const [destination,setDestination] = useState(location.state.destination);
+  const destination = useState(location.state.destination);
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false);
-  const [options,setOptions] = useState(location.state.options);
+  const options = useState(location.state.options);
 
   return (
     <div>
@@ -32,8 +32,8 @@ const List = () => {
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <label>{destination}</label>
-              <input placeholder={setDestination} type="text" />
+              <label>Destination</label>
+              <input placeholder={destination} type="text" />
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
@@ -69,7 +69,7 @@ const List = () => {
                   <input
                     type="number"
                     min={1}
-                    className="lsOptionInput"
+                    className="IsOptionInput"
                     placeholder={options.adult}
                   />
                 </div>
