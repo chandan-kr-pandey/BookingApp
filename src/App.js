@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter basename="/BookingApp">
       <Routes>
-        <Route path="/BookingApp" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/hotels" element={<List/>}/>
         <Route path="/hotels/:id" element={<Hotel/>}/>
       </Routes>
