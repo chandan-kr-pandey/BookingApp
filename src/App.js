@@ -9,9 +9,9 @@ import List from "./pages/list/List";
 
 function App() {
   return (
-    <BrowserRouter basename="/BookingApp">
+    <BrowserRouter Basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route exact path="/BookingApp" element={<Home/>}/>
         <Route path="/hotels" element={<List/>}/>
         <Route path="/hotels/:id" element={<Hotel/>}/>
       </Routes>
